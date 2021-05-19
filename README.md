@@ -9,6 +9,10 @@ thanks to Alok Rawat for the tip https://qiita.com/alokrawat050/items/0d7791b391
 ALSO ADDING var's that are only needed for the app as ENV vars is not a good practice.
 In the process of adding a gem for var management now
 
+# 05/19/21 --- USED the dotenv gem for env vars
+to get it working, put a .env in the directory root and set up variables: MONGO_ATLAS_USER & MONGO_ATLAS_PASSWORD
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
