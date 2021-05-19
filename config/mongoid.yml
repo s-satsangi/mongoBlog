@@ -12,7 +12,7 @@ development:
       # hosts:
       #   - localhost:27017
       #############################   AND COMMENTED OUT
-      uri: mongodb+srv://ENV.fetch('MONGO_ATLAS_USER'):ENV["MONGO_ATLAS_PASSWORD"]@happysquirrel0.evqxu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+      uri: mongodb+srv://user:password@happysquirrel0.evqxu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
       options:
         server_selection_timeout: 5
         # Note that all options listed below are Ruby driver client options (the mongo gem).
@@ -32,10 +32,10 @@ development:
         #     - use: web
 
         # The name of the user for authentication.
-        # user: 'user'
+        user: <%= ENV.fetch('MONGO_ATLAS_USER') %>
 
         # The password of the user for authentication.
-        # password: 'password'
+        password: <%= ENV.fetch('MONGO_ATLAS_PASSWORD') %>
 
         # The user's database roles.
         # roles:
